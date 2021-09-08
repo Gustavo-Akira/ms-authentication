@@ -20,4 +20,5 @@ public class AuthenticationServiceImpl implements AuthenticationServicePort {
     public String validateJwt(String jwt) {
         return port.validateJwt(jwt);
     }
+
 }

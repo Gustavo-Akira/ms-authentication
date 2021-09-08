@@ -42,4 +42,5 @@ public class AuthenticationRepository implements AuthenticationRepositoryPort {
         }
         return null;
     }
+
 }

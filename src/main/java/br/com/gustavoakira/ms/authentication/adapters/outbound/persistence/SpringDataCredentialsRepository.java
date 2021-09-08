@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 @Repository
 public interface SpringDataCredentialsRepository extends JpaRepository<CredentialsEntity, UUID> {
-    @Query("select c from Credentials c where c.username=':username' and c.password=':password'")
+    @Query("select c from CredentialsEntity c where c.username=':username' and c.password=':password'")
     CredentialsEntity getCredentialByEmailAndPassword(String username, String password);
 }
