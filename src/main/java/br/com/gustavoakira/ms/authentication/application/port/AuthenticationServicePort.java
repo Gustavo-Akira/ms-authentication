@@ -1,5 +1,6 @@
 package br.com.gustavoakira.ms.authentication.application.port;
 
+import br.com.gustavoakira.ms.authentication.adapters.dto.JwtDto;
 import br.com.gustavoakira.ms.authentication.application.domain.Credentials;
 
 public interface AuthenticationServicePort {

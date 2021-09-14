@@ -1,6 +1,7 @@
 package br.com.gustavoakira.ms.authentication.adapters.inbound.controller;
 
 import br.com.gustavoakira.ms.authentication.adapters.dto.CredentialsDto;
+import br.com.gustavoakira.ms.authentication.adapters.dto.JwtDto;
 import br.com.gustavoakira.ms.authentication.application.domain.Credentials;
 import br.com.gustavoakira.ms.authentication.application.port.AuthenticationServicePort;
 import org.modelmapper.ModelMapper;
@@ -21,8 +22,8 @@ public class AuthenticationController {
         return port.authenticate(mapper.map(credentials,Credentials.class));
     }
 
-    @GetMapping("/validate")
-    public String isValid(@RequestBody String jwt){
-        return port.validateJwt(jwt);
+    @PostMapping("/validate")
+    public String isValid(@RequestBody JwtDto jwt){
+        return port.validateJwt(jwt.getJwt());
     }
 }
