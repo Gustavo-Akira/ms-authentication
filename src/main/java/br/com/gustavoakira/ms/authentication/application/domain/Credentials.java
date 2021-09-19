@@ -16,5 +16,6 @@ public class Credentials {
     private String username;
     private String password;
     private UUID userId;
+    private Integer level;
     private String jwt;
 }

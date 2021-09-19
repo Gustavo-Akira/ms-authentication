@@ -18,6 +18,7 @@ public class AuthenticationConsumer {
                 .userId(message.getUserId())
                 .username(message.getUsername())
                 .password(message.getPassword())
+                .level(1)
                 .build());
         System.out.println("Consumido " + message);
     }

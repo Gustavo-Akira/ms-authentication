@@ -9,4 +9,5 @@ public class CredentialsDto {
     private String username;
     private String password;
     private UUID userId;
+    private Integer level = 2;
 }
